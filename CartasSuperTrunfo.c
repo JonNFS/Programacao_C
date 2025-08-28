@@ -1,22 +1,89 @@
+/* Desafio Super Trunfo - Países (Nível Novato) */
+
 #include <stdio.h>
+#include <string.h>
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
+int main(){
 
-int main() {
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
-    
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+    char Estado[3];
+    char Codigo[6];
+    char Nome_Cidade[30];
+    int Populacao;
+    float Area;
+    float Pib;
+    int Pontos_Turisticos;
 
-    return 0;
+    // Carta 1
+    printf("Insira os dados necessários para criar a primeira carta.\n");
+        
+    printf("Digite o Estado (sigla): ");
+    scanf("%s", Estado);
+    getchar(); // Limpa o buffer do teclado
+
+    printf("Digite o Codigo (Sigla + Codigo): ");
+    scanf("%s", Codigo);
+    getchar(); // Limpa o buffer do teclado
+
+    printf("Digite o Nome da Cidade: ");
+    fgets(Nome_Cidade, sizeof(Nome_Cidade), stdin); // Usando fgets para permitir espaços no nome da cidade
+    Nome_Cidade[strcspn(Nome_Cidade, "\n")] = '\0'; // Removendo o caractere de nova linha
+    //getchar(); Não é necessário aqui pois o fgets já consome a nova linha
+
+    printf("Digite a População: ");
+    scanf("%d", &Populacao);
+    getchar(); // Limpa o buffer do teclado
+
+    printf("Digite a Área: ");
+    scanf("%f km²", &Area);
+    getchar(); // Limpa o buffer do teclado
+
+    printf("Digite o PIB: ");
+    scanf("%f", &Pib);
+    getchar(); // Limpa o buffer do teclado
+
+    printf("Digite a Quantidade de Pontos Turísticos: ");
+    scanf("%d", &Pontos_Turisticos);   
+    getchar(); // Limpa o buffer do teclado
+
+    printf("Carta 1 criada com sucesso!\n");
+    printf("Estado: %s\nCódigo do Estado: %s\nNome da Cidade: %s\nPopulação: %d\nÁrea: %.2f\nPIB: %.2f\nPontos Turísticos: %d\n", Estado, Codigo, Nome_Cidade, Populacao, Area, Pib, Pontos_Turisticos);
+
+    // Carta 2
+    printf("Insira os dados necessários para criar a segunda carta.\n");
+        
+    printf("Digite o Estado (sigla): ");
+    scanf("%s", Estado);
+    getchar(); // Limpa o buffer do teclado
+
+    printf("Digite o Codigo (Sigla + Codigo): ");
+    scanf("%s", Codigo);
+    getchar(); // Limpa o buffer do teclado
+
+    printf("Digite o Nome da Cidade: ");
+    fgets(Nome_Cidade, sizeof(Nome_Cidade), stdin); // Usando fgets para permitir espaços no nome da cidade
+    Nome_Cidade[strcspn(Nome_Cidade, "\n")] = '\0'; // Removendo o caractere de nova linha
+    //getchar(); Não é necessário aqui pois o fgets já consome a nova linha
+
+    printf("Digite a População: ");
+    scanf("%d", &Populacao);
+    getchar(); // Limpa o buffer do teclado
+
+    printf("Digite a Área: ");
+    scanf("%f km²", &Area);
+    getchar(); // Limpa o buffer do teclado
+
+    printf("Digite o PIB: ");
+    scanf("%f", &Pib);
+    getchar(); // Limpa o buffer do teclado
+
+    printf("Digite a Quantidade de Pontos Turísticos: ");
+    scanf("%d", &Pontos_Turisticos);   
+    getchar(); // Limpa o buffer do teclado
+
+    printf("Carta 2 criada com sucesso!\n");
+    printf("Estado: %s\nCódigo do Estado: %s\nNome da Cidade: %s\nPopulação: %d\nÁrea: %.2f\nPIB: %.2f\nPontos Turísticos: %d\n", Estado, Codigo, Nome_Cidade, Populacao, Area, Pib, Pontos_Turisticos);
+
+    return 0;   
+
 }
+
