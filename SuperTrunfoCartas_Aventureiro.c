@@ -47,7 +47,7 @@ int main(){
     scanf("%d", &Pontos_Turisticos);   
     getchar(); // Limpa o buffer do teclado
 
-    // Cálculo para a População por Área em km² e PIB per Capita - Precisa colocar depois dos scans para usar os valores fornecidos pelo usuário //
+    // Cálculo para a População por Área em km² e PIB per Capita - Precisa colocar depois dos scans para usar os valores fornecidos pelo usuário 
     Populacao_Densidade = Populacao / Area;
     Pib_Per_Capita = Pib / Populacao;
 
@@ -90,7 +90,7 @@ int main(){
     scanf("%d", &Pontos_Turisticos);   
     getchar(); // Limpa o buffer do teclado
 
-    // Cálculo para a População por Área em km² e PIB per Capita - Precisa colocar depois dos scans para usar os valores fornecidos pelo usuário //
+    // Cálculo para a População por Área em km² e PIB per Capita - Precisa colocar depois dos scans para usar os valores fornecidos pelo usuário 
     Populacao_Densidade = Populacao / Area;
     Pib_Per_Capita = Pib / Populacao;
 
