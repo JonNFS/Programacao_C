@@ -18,11 +18,9 @@ int main(){
         
     printf("Digite o Estado (sigla): ");
     scanf("%s", Estado);
-    getchar(); // Limpa o buffer do teclado
 
     printf("Digite o Codigo (Sigla + Codigo): ");
     scanf("%s", Codigo);
-    getchar(); // Limpa o buffer do teclado
 
     printf("Digite o Nome da Cidade: ");
     fgets(Nome_Cidade, sizeof(Nome_Cidade), stdin); // Usando fgets para permitir espaços no nome da cidade
@@ -31,20 +29,16 @@ int main(){
 
     printf("Digite a População: ");
     scanf("%d", &Populacao);
-    getchar(); // Limpa o buffer do teclado
-
+    
     printf("Digite a Área: ");
     scanf("%f", &Area);
-    getchar(); // Limpa o buffer do teclado
-
+    
     printf("Digite o PIB: ");
     scanf("%f", &Pib);
-    getchar(); // Limpa o buffer do teclado
-
+    
     printf("Digite a Quantidade de Pontos Turísticos: ");
     scanf("%d", &Pontos_Turisticos);   
-    getchar(); // Limpa o buffer do teclado
-
+    
     printf("Carta 1 criada com sucesso!\n");
     printf("Estado: %s\nCódigo do Estado: %s\nNome da Cidade: %s\nPopulação: %d\nÁrea: %.2f\nPIB: %.2f\nPontos Turísticos: %d\n", Estado, Codigo, Nome_Cidade, Populacao, Area, Pib, Pontos_Turisticos);
 
@@ -53,12 +47,10 @@ int main(){
         
     printf("Digite o Estado (sigla): ");
     scanf("%s", Estado);
-    getchar(); // Limpa o buffer do teclado
-
+    
     printf("Digite o Codigo (Sigla + Codigo): ");
     scanf("%s", Codigo);
-    getchar(); // Limpa o buffer do teclado
-
+    
     printf("Digite o Nome da Cidade: ");
     fgets(Nome_Cidade, sizeof(Nome_Cidade), stdin); // Usando fgets para permitir espaços no nome da cidade
     Nome_Cidade[strcspn(Nome_Cidade, "\n")] = '\0'; // Removendo o caractere de nova linha
@@ -66,20 +58,16 @@ int main(){
 
     printf("Digite a População: ");
     scanf("%d", &Populacao);
-    getchar(); // Limpa o buffer do teclado
-
+    
     printf("Digite a Área: ");
     scanf("%f", &Area);
-    getchar(); // Limpa o buffer do teclado
-
+    
     printf("Digite o PIB: ");
     scanf("%f", &Pib);
-    getchar(); // Limpa o buffer do teclado
-
+    
     printf("Digite a Quantidade de Pontos Turísticos: ");
     scanf("%d", &Pontos_Turisticos);   
-    getchar(); // Limpa o buffer do teclado
-
+    
     printf("Carta 2 criada com sucesso!\n");
     printf("Estado: %s\nCódigo do Estado: %s\nNome da Cidade: %s\nPopulação: %d\nÁrea: %.2f\nPIB: %.2f\nPontos Turísticos: %d\n", Estado, Codigo, Nome_Cidade, Populacao, Area, Pib, Pontos_Turisticos);
 

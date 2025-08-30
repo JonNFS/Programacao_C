@@ -6,12 +6,14 @@
 int main() {
     // Dados das cartas
     char Estado1[3], Codigo1[6], Nome_Cidade1[30];
-    int Populacao1, Pontos_Turisticos1;
-    float Area1, Pib1, Densidade1, PibCapita1;
+    unsigned long int Populacao1;
+    int Pontos_Turisticos1;
+    float Area1, Pib1, Densidade1, PibCapita1, SuperPoder1;
 
     char Estado2[3], Codigo2[6], Nome_Cidade2[30];
-    int Populacao2, Pontos_Turisticos2;
-    float Area2, Pib2, Densidade2, PibCapita2;
+    unsigned long int Populacao2;
+    int Pontos_Turisticos2;
+    float Area2, Pib2, Densidade2, PibCapita2, SuperPoder2;
 
     int escolha;
 
@@ -28,6 +30,7 @@ int main() {
 
     Densidade1 = Populacao1 / Area1;
     PibCapita1 = Pib1 / Populacao1;
+    SuperPoder1 = Populacao1 + Area1 + Pib1 + Pontos_Turisticos1 + PibCapita1 + (1.0 / Densidade1);
 
     // Carta 2
     printf("\nInsira os dados da segunda carta.\n");
@@ -42,39 +45,28 @@ int main() {
 
     Densidade2 = Populacao2 / Area2;
     PibCapita2 = Pib2 / Populacao2;
+    SuperPoder2 = Populacao2 + Area2 + Pib2 + Pontos_Turisticos2 + PibCapita2 + (1.0 / Densidade2);
 
     // Exibir cartas
     printf("\nCarta 1\n");
-    printf("Estado: %s\nCodigo: %s\n Nome da Cidade: %s\n", Estado1, Codigo1, Nome_Cidade1);
-    printf("Populacao: %d\nArea: %.2f\nPIB: %.2f\nPontos Turisticos: %d\n", Populacao1, Area1, Pib1, Pontos_Turisticos1);
-    printf("Densidade Populacional: %.2f\nPIB per Capita: %.2f\n", Densidade1, PibCapita1);
+    printf("Estado: %s\nCodigo: %s\nCidade: %s\n", Estado1, Codigo1, Nome_Cidade1);
+    printf("Populacao: %lu\nArea: %.2f\nPIB: %.2f\nPontos Turisticos: %d\n", Populacao1, Area1, Pib1, Pontos_Turisticos1);
+    printf("Densidade Populacional: %.2f\nPIB per Capita: %.2f\nSuper Poder: %.2f\n", Densidade1, PibCapita1, SuperPoder1);
 
     printf("\nCarta 2\n");
-    printf("Estado: %s\nCodigo: %s\nNome da Cidade: %s\n", Estado2, Codigo2, Nome_Cidade2);
-    printf("Populacao: %d\nArea: %.2f\nPIB: %.2f\nTuristicos: %d\n", Populacao2, Area2, Pib2, Pontos_Turisticos2);
-    printf("Densidade Populacional: %.2f\nPIB per Capita: %.2f\n", Densidade2, PibCapita2);
+    printf("Estado: %s\nCodigo: %s\nCidade: %s\n", Estado2, Codigo2, Nome_Cidade2);
+    printf("Populacao: %lu\nArea: %.2f\nPIB: %.2f\nPontos Turisticos: %d\n", Populacao2, Area2, Pib2, Pontos_Turisticos2);
+    printf("Densidade Populacional: %.2f\nPIB per Capita: %.2f\nSuper Poder: %.2f\n", Densidade2, PibCapita2, SuperPoder2);
 
-    // Solicitar escolha do atributo
-    printf("\nEscolha o atributo para comparar:\n");
-    printf("1 - Populacao\n");
-    printf("2 - Area\n");
-    printf("3 - PIB\n");
-    printf("4 - Pontos Turisticos\n");
-    printf("5 - Densidade Populacional\n");
-    printf("6 - PIB per Capita\n");
-    printf("Opcao: ");
-    scanf("%d", &escolha);
-
+    // Comparar e exibir resultado
     printf("\nResultado: ");
-    switch (escolha) {
-        case 1: (Populacao1 > Populacao2) ? printf("Carta 1 venceu!\n") : printf("Carta 2 venceu!\n"); break;
-        case 2: (Area1 > Area2) ? printf("Carta 1 venceu!\n") : printf("Carta 2 venceu!\n"); break;
-        case 3: (Pib1 > Pib2) ? printf("Carta 1 venceu!\n") : printf("Carta 2 venceu!\n"); break;
-        case 4: (Pontos_Turisticos1 > Pontos_Turisticos2) ? printf("Carta 1 venceu!\n") : printf("Carta 2 venceu!\n"); break;
-        case 5: (Densidade1 > Densidade2) ? printf("Carta 1 venceu!\n") : printf("Carta 2 venceu!\n"); break;
-        case 6: (PibCapita1 > PibCapita2) ? printf("Carta 1 venceu!\n") : printf("Carta 2 venceu!\n"); break;
-        default: printf("Opcao invalida!\n");
-    }
+    printf("Populacao: %s\n", (Populacao1 > Populacao2) ? "Carta 1 venceu!" : "Carta 2 venceu!");
+    printf("Area: %s\n", (Area1 > Area2) ? "Carta 1 venceu!" : "Carta 2 venceu!");
+    printf("PIB: %s\n", (Pib1 > Pib2) ? "Carta 1 venceu!" : "Carta 2 venceu!");
+    printf("Pontos Turisticos: %s\n", (Pontos_Turisticos1 > Pontos_Turisticos2) ? "Carta 1 venceu!" : "Carta 2 venceu!");
+    printf("Densidade Populacional: %s\n", (Densidade1 < Densidade2) ? "Carta 1 venceu!" : "Carta 2 venceu!");
+    printf("PIB per Capita: %s\n", (PibCapita1 > PibCapita2) ? "Carta 1 venceu!" : "Carta 2 venceu!");
+    printf("Super Poder: %s\n", (SuperPoder1 > SuperPoder2) ? "Carta 1 venceu!" : "Carta 2 venceu!");
 
     return 0;
 }
